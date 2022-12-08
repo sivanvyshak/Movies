@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div class="card"style="width: 18rem;" >
+  <img class="card-img-top" src="{{movie.img.url}}" height="200" width="200">
+  <div class="card-body">
+      <h5 class="card-title">{{movie.name}}</h5>
+        <p class="card-text">{{movie.desc}}</p>
+      <a href="{% url 'my_newprojectapp:update' movie.id %}" class="btn btn-primary">Update</a>
+      <a href="{% url 'my_newprojectapp:delete' movie.id %}" class="btn btn-primary">Delete</a>
+
+  </div>
+</div>
+{% endblock %}

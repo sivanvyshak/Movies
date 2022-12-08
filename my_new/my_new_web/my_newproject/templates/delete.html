@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block body %}
+<form method="POST">
+    {% csrf_token %}
+    Are you sure want to delete this?
+    <input class="btn btn-warning" type="submit" value="Submit">
+
+</form>
+{% endblock %}
